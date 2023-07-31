@@ -1,0 +1,19 @@
+<!--
+  Está sendo utilizado a interpolação {{}} para inserir qual será o tipo de stylo a ser
+  utilizado: modelo1, modelo2 e modelo3 dependendo do que for selecionado.
+
+  Está sendo utilizado a diretiva ngClass para chamar o metodo LarguraPensamento que retorna uma string de stylo.
+-->
+<div class="pensamento {{ pensamento.modelo }} ff-roboto-mono" [ngClass]="larguraPensamento()">
+  <img src="../../../../assets/imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas">
+  <p class="conteudo">{{ pensamento.conteudo }}</p>
+  <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
+  <div class="acoes">
+    <button class="botao-editar" routerLink="/editarPensamento/{{pensamento.id}}">
+      <img src="../../../../assets/imagens/icone-editar.png" alt="Ícone editar">
+    </button>
+    <button class="botao-excluir" routerLink="/excluirPensamento/{{pensamento.id}}">
+      <img src="../../../../assets/imagens/icone-excluir.png" alt="Ícone excluir">
+    </button>
+  </div>
+</div>

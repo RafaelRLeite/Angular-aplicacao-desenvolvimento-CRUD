@@ -1,77 +1,27 @@
-# Angular: aplicacao-desenvolvimento-CRUD
-Curso de Angular 14: aplicando os conceitos e desenvolvendo um CRUD
-
 # Memoteca
 
-| É um sistema de gerenciamento de Cartões desenvolvido em Angular, que utiliza o Angular-CLI e o banco json-server. Ele possui uma interface de usuário web utilizando HTML5, CSS3 e Angular. Além disso, o projeto é gerenciado pelo GIT e hospedado no GitHub. O objetivo do Memoteca é guarde trechos de músicas, citações de livros, pensamentos e suas melhores ideias.
-| --- |
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
+## Development server
 
-## Templates
-    * Pensamento
-   
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Funcionalidades
-    * Cadastro
-    * Alteração
-    * Delete
-    * Busca por id
----
-## Tecnologias utilizadas
-    * HTML5
-    * CSS3
-    * Angular
-    * GIT
-    * GitHub
----
-## Como executar
-Para executar o sistema, é necessário ter instalado e configurado as seguintes tecnologias:
-- **[Node](https://nodejs.org/en/download)**
-- **[Json-server](https://www.npmjs.com/package/json-server#getting-started)**
+## Code scaffolding
 
-Com as tecnologias instaladas, siga os seguintes passos:
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
----
-## Clone o repositório do GitHub:
+## Build
 
-```
-git clone https://github.com/RafaelRleite/Angular-aplicacao-desenvolvimento-CRUD.git
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Navegue para o diretório do projeto:
+## Running unit tests
 
-```
-cd /memoteca
-```
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Instale o CLIN do Angular:
+## Running end-to-end tests
 
-```
-npm install -g @angular/cli
-```
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Suba o servidor Angular:
+## Further help
 
-```
-ng serve
-```
-
-## Navegue para o diretório do projeto:
-
-```
-mkdir /memoteca/backend
-```
-
-## Suba o servidor json-server:
-
-```
-npm start
-```
-
-## Acesse o sistema no navegador:
-
-```
-http://localhost:4200
-```
-
----
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

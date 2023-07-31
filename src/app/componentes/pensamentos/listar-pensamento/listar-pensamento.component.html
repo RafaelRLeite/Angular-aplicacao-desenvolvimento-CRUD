@@ -1,0 +1,37 @@
+<section class="container">
+  <header class="header d-flex">
+    <h2 class="ff-inter">Meu mural</h2>
+    <!--
+      Está sendo incluido a diretiva routerLink para tranformar o button em um link que ao ser clicar
+      será redirecionado para o path passado nas aspas. Faz a mesma função do atributo href porem
+      sem carregar a tela inteira.
+    -->
+    <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button>
+  </header>
+  <div class="mural" *ngIf="listaPensamentos.length > 0, else semPensamentos">
+    <!--
+      Está sendo usado a diretiva estrutural *ngFor para criar uma estrutura de repetição e assim
+      modificar as estruturas no HTML. Ela repebe uma expressão lambda onde para cada pensamento que está na
+      listaPensamento faz uma interação.
+    -->
+    <div *ngFor="let pensamento of listaPensamentos">
+      <!--
+        Foi usado o property binding [] para fazer a conexão unidirecional do componente com o template
+        O atributo pensamento(com o decorator @Input()) do componente Pensamento(filho) recebe o valor do item pensamento da
+        listaPensamentos do componente ListarPensamento(pai)
+      -->
+      <app-pensamento [pensamento]="pensamento"></app-pensamento>
+    </div>
+  </div>
+</section>
+
+<!--
+  Esse elemento ng-template não é renderizado por padrão tem que ser instruito a aparecer
+  O atributo # nomeia o elemento
+  Foi criado ele elemento para ser renderizados da validação else da diretiva *ngIf da tag mural
+-->
+<ng-template #semPensamentos>
+  <div class="ff-inter sem-pensamentos">
+    <p>Ainda não há pensamentos cadastrados</p>
+  </div>
+</ng-template>
