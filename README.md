@@ -35,7 +35,7 @@ Com as tecnologias instaladas, siga os seguintes passos:
 ## Clone o repositório do GitHub:
 
 ```
-
+git clone https://github.com/RafaelRleite/Angular-aplicacao-desenvolvimento-CRUD.git
 ```
 
 ## Navegue para o diretório do projeto:
