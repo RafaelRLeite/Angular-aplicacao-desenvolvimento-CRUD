@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pensamento } from '../pensamento';
 import { PensamentoService } from '../pensamento.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -16,12 +17,33 @@ pensamento: Pensamento = {
   modelo: 'modelo1'
 }
 
+//Principal bloco para construção de formulários do Angular
+formulario!: FormGroup;
+
   constructor(
     private service: PensamentoService,
-    private router: Router
-    ){}
+    private router: Router,
+    //Outro serviço para construção de formulários do Angular
+    private formBuild:FormBuilder
+  ){}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //Criação dos atributos que irão constar no formulário
+    this.formulario = this.formBuild.group({
+      conteudo: ['Formulário reativo'],
+      autoria: [''],
+      modelo: ['modelo1']
+    })
+
+    //Outra forma de criar uma formulário reativo:
+    /*
+        this.formulario = new FormGroup({
+        conteudo: new FormControl(''),
+        autoria: new FormControl(''),
+        modelo: new FormControl('')
+      })
+    */
+  }
 
   criarPensamento(){
     this.service.criar(this.pensamento).subscribe(() =>{
