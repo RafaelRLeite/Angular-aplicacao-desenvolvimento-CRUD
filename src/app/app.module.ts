@@ -28,7 +28,7 @@ import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pens
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    //importe para criar formulários reativos, ouseja com validações
+    //importe para criar formulários reativos, ou seja com validações
     ReactiveFormsModule
   ],
   providers: [],

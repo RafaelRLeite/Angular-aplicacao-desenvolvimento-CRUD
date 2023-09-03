@@ -20,17 +20,15 @@ export class PensamentoService {
 */
   constructor(private http: HttpClient) { }
 
-  /*
+/*
   A requisição me retorna um observaveis de uma lista de pensamentos
-  */
+  O retorno Observable são dados observaveis, ou seja é feito uma conexão com o EndPoint de modo que se houver uma
+  alteração nos dados do backend é possivel saber pelo frontend pelo retorno Observable.
+*/
   listar(): Observable<Pensamento[]>{
     return this.http.get<Pensamento[]>(this.API)
   }
 
-/*
-  O retorno Observable são dados observaveis, ou seja é feito uma conexão com o EndPoint de modo que se houver uma
-  alteração nos dados do backend é possivel saber pelo frontend pelo retorno Observable.
-*/
   criar(pensamento: Pensamento): Observable<Pensamento>{
     return this.http.post<Pensamento>(this.API , pensamento)
   }
